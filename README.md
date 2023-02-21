@@ -189,6 +189,6 @@ If you like this project please give a⭐️ and share with your friends.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Kashif-Saleem-Ghuman/react-capstone/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/Kashif-Saleem-Ghuman/vet-clinic-database/blob/main/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
