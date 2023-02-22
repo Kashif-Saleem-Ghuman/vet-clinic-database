@@ -33,3 +33,10 @@ CREATE TABLE IF NOT EXISTS public.species
     name character varying COLLATE pg_catalog."default",
     CONSTRAINT species_pkey PRIMARY KEY (id)
 )
+
+ALTER TABLE animals
+  DROP COLUMN IF EXISTS species,
+  ADD COLUMN species_id INTEGER,
+  ADD COLUMN owner_id INTEGER,
+  ADD CONSTRAINT fk_animals_species FOREIGN KEY (species_id) REFERENCES species(id),
+  ADD CONSTRAINT fk_animals_owners FOREIGN KEY (owner_id) REFERENCES owners(id);
