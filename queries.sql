@@ -76,3 +76,18 @@ SELECT species, AVG(escape_attempts) AS avg_escape_attempts
 FROM animals
 WHERE date_of_birth BETWEEN DATE '1990-01-01' AND DATE '2000-12-31'
 GROUP BY species;
+
+-- correct wightt of Angemon 
+UPDATE animals
+SET weight_kg = -45
+WHERE name = 'Angemon';
+
+-- correct wightt of Charmander
+UPDATE animals
+SET weight_kg = -11
+WHERE name = 'Charmander';
+
+-- correct wightt of Plantmon
+UPDATE animals
+SET weight_kg = -5.7
+WHERE name = 'Plantmon';
