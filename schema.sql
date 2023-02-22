@@ -17,3 +17,19 @@ TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public.animals
     OWNER to postgres;
+
+
+ CREATE TABLE IF NOT EXISTS public.owners
+(
+    id integer NOT NULL DEFAULT 'nextval('owners_id_seq'::regclass)',
+    full_name character varying COLLATE pg_catalog."default",
+    age integer,
+    CONSTRAINT owners_pkey PRIMARY KEY (id)
+)
+
+CREATE TABLE IF NOT EXISTS public.species
+(
+    id integer NOT NULL DEFAULT 'nextval('species_id_seq'::regclass)',
+    name character varying COLLATE pg_catalog."default",
+    CONSTRAINT species_pkey PRIMARY KEY (id)
+)
