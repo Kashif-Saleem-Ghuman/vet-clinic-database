@@ -33,3 +33,23 @@ values ('Blossom', '1998-10-13', 3, True, 17);
 
 insert into animals (name, date_of_birth, escape_attempts ,  neutered, weight_kg)
 values ('Ditto', '2022-05-14', 4, True, 22)
+
+-- correct wightt of Angemon 
+UPDATE animals
+SET weight_kg = -45
+WHERE name = 'Angemon';
+
+-- correct wightt of Charmander
+UPDATE animals
+SET weight_kg = -11
+WHERE name = 'Charmander';
+
+-- correct wightt of Plantmon
+UPDATE animals
+SET weight_kg = -5.7
+WHERE name = 'Plantmon';
+
+-- correct wightt of Squirtle
+UPDATE animals
+SET weight_kg = -12.13
+WHERE name = 'Squirtle';
