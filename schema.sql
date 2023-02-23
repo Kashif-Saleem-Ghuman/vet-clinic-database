@@ -40,3 +40,31 @@ ALTER TABLE animals
   ADD COLUMN owner_id INTEGER,
   ADD CONSTRAINT fk_animals_species FOREIGN KEY (species_id) REFERENCES species(id),
   ADD CONSTRAINT fk_animals_owners FOREIGN KEY (owner_id) REFERENCES owners(id);
+
+CREATE TABLE IF NOT EXISTS public.vets
+(
+    id integer NOT NULL DEFAULT 'nextval('vets_id_seq'::regclass)',
+    name character varying(50) COLLATE pg_catalog."default",
+    age integer,
+    date_of_graduation date,
+    CONSTRAINT vets_pkey PRIMARY KEY (id)
+)
+
+CREATE TABLE specializations (
+  vet_id INTEGER,
+  species_id INTEGER,
+  PRIMARY KEY (vet_id, species_id),
+  FOREIGN KEY (vet_id) REFERENCES vets(id),
+  FOREIGN KEY (species_id) REFERENCES species(id)
+);
+
+CREATE TABLE visits (
+  vet_id INTEGER,
+  animal_id INTEGER,
+  visit_date DATE,
+  PRIMARY KEY (vet_id, animal_id, visit_date),
+  FOREIGN KEY (vet_id) REFERENCES vets(id),
+  FOREIGN KEY (animal_id) REFERENCES animals(id)
+);
+
+  
