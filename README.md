@@ -32,7 +32,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 <!-- PROJECT DESCRIPTION -->
 
+
 # 📖 [Vet clinic database] <a name="about-project"></a>
+![Untitled](https://user-images.githubusercontent.com/111677605/221865435-ee004872-eb6a-46cc-8475-22fd0e1461c1.png)
 
 **Vet clinic database** is a relational database to create the data structure for a vet clinic. In this project we will create a complete database with data about:
 
